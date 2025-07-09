@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+     <link rel="stylesheet" href="assets/styles/help.css">
+</head>
+<body>
+         <div class="mouse"></div>
+    <script src="assets/scripts/MouseScript.js"></script>
+    <!--header-->
+            <header class="header">
+        <div class="logo">
+            <!--<a href="#"class="logo">SubtiLens</a> -->
+            <a href="index.html">
+            <img src="assets/images/test logo.png" class ="logoimg"  >
+        </a>
+        <nav class="botones">
+            <ul>
+                <li><a href="buy.html">Comprar</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="user-item"><a href="/login">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+        </div>
+        </header>
+    <h1 class="guia">Guía de usuario</h1>
+    <div class ="instrucciones">
+    <li >1. Encender gafas.</li>
+    <p> Manten presionado el boton lateral durante 3 segundos para que encienda.</p>
+    <li >2. Conectar gafas a la aplicación móvil.</li>
+    <p>Abre el aplicativo de "Subtilens" y selecciona la opcion de emparejamiento.</p>
+    <p>Luego, selecciona el dispositivo "Subtilens" en la lista de dispositivos disponibles.</p>
+    <p>Espera a que la conexion se establezca.</p>
+    <li >3. Cambiar idioma de subtitulos.</li>
+    <p>En el aplicativo, ve a configuración, luego seleccione la opcion cambiar idioma,</p>
+    <p>selecciona el idioma deseado y espera a que se actualice.</p>
+    <li >4. Apagar las gafas.</li>
+    <p>Mantén presionado el botón lateral durante 3 segundos para que se apaguen.</p>
+    <p>¿Tienes mas dudas? Revisa la guia de usuario haciendo click aqui: <span><a href="#" class="guialink">Guia de Usuario</a></span></span></p>
+    </div>
+    <h1 class="preguntas">Preguntas frecuentes (FAQ)</h1>
+    <div class="respuestas">
+        <li>¿SubtiLens necesita conexion a internet?</li>
+        <p>No para funciones básicas como subtitulado local. Pero sí es necesaria sincronización con la nube o actualizaciones.</p>
+        <li>¿Se puede cambiar el idioma de los subtítulos?</li>
+        <p>Sí, puedes configurarlo desde la aplicación móvil en cualquier momento.</p>
+        <li>¿Qué pasa si hay mucho ruido?</li>
+        <p>Funciona mejor en ambientes moderadamente silenciosos pero está optimizado para captar conversaciones cercanas.</p>
+        <li>¿Es compatible con todos los teléfonos?</li>
+        <p>Funciona con Android 8+ y iOS 13+ mediante el aplicativo.</p>
+        <p class="void">     </p>
+    </div>
+    
+</body>
+<script>
+fetch('/api/usuario')
+  .then(res => res.json())
+  .then(data => {
+    if (data.usuario) {
+      const userItem = document.getElementById('user-item');
+      userItem.innerHTML = `<span>👤 ${data.usuario}</span> <a href="/logout" style="margin-left:10px;color:red;">Salir</a>`;
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+      <link rel="stylesheet" href="assets/styles/login.css">
+</head>
+<body>  
+    <div class="mouse"></div>
+    <script src="assets/scripts/MouseScript.js"></script>
+        <!--header-->
+        <header class="header">
+        <div class="logo">
+            <!--<a href="#"class="logo">SubtiLens</a> -->
+            <a href="index.html">
+            <img src="assets/images/test logo.png" class ="logoimg"  >
+        </a>
+        <nav class="botones">
+            <ul>
+                <li><a href="buy.html">Comprar</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <!--<li><a href="/login">Iniciar sesion</a></li>-->        
+                </ul>
+        </nav>
+        </div>
+    </header>
+     <!--Interfaz Login-->
+
+        <div class="Interfaz">
+            <h1>Inicio de sesión</h1>
+           
+            <form action="/login" method="post">
+                 
+                <div class="username">
+                    <input type="text" name = "usuario" id = "" required>
+                    <label >Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input type="password" name = "contrasena" id = "" required>
+                    <label >Contraseña</label>
+                </div>
+                <div class="remember" >
+                    <a href="remember.html">¿Olvidaste tu contraseña? </a>
+                </div>
+                <input type="submit" name = "" id = "" value="Iniciar sesión" >
+                <div class="register">¿No tienes una cuenta? <a href="register.html">¡Registrate!</a> 
+                </div>
+            </form>
+        </div>
+</body>
+</html>
