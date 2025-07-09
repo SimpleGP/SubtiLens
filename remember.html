@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+      <link rel="stylesheet" href="assets/styles/remember.css">
+</head>
+<body>  
+    <div class="mouse"></div>
+    <script src="assets/scripts/MouseScript.js"></script>
+        <!--header-->
+        <header class="header">
+        <div class="logo">
+            <!--<a href="#"class="logo">SubtiLens</a> -->
+            <a href="index.html">
+            <img src="assets/images/test logo.png" class ="logoimg"  >
+        </a>
+        <nav class="botones">
+            <ul>
+                <li><a href="buy.html">Comprar</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <!--<li><a href="/login">Iniciar sesion</a></li>-->
+            </ul>
+        </nav>
+        </div>
+    </header>
+     <!--Interfaz Login-->
+
+        <div class="Interfaz">
+            <h1>Restablecer contraseña</h1>
+           
+            <form onsubmit="restablecerContrasena(event)">
+                 
+                <div class="username">
+                    <input type="text" name = "usuario" id = "usuario" required>
+                    <label >Nombre de usuario</label>
+                </div>
+                <div class="username">
+                    <input type="text" name = "correo" id = "correo" required>
+                    <label >Correo electronico</label>
+                </div>
+                <div class="username">
+                    <input type="text" name = "nueva" id = "nueva" required>
+                    <label >Nueva Contraseña</label>
+                </div>
+
+                <div class="username">
+                    <input type="text" name = "confirmar" id = "confirmar" required>
+                    <label >Confirmar Contraseña</label>
+                </div>
+
+                <input type="submit" name = "" id = "" value="Recuperar Contraseña" >
+                <br>
+                 
+            </form>
+        </div>
+   
+        <script src="assets/scripts/PasswordValidation.js"></script>
+</body>
+</html>

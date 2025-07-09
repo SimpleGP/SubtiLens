@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="assets/styles/about.css">
+</head>
+<body>
+     <div class="mouse"></div>
+    <script src="assets/scripts/MouseScript.js"></script>
+    
+        <!--header-->
+        <header class="header">
+        <div class="logo">
+            <!--<a href="#"class="logo">SubtiLens</a> -->
+            <a href="index.html">
+            <img src="assets/images/test logo.png" class ="logoimg"  >
+        </a>
+        <nav class="botones">
+            <ul>
+                <li><a href="buy.html">Comprar</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li id="user-item"><a href="/login">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+        </div>
+        </header>
+    <h1 class = "aboutus">Sobre nosotros</h1>
+    <p class = "aboutustext">
+        Nosostros somos la empresa SentirTEC, un startup liderado por estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC), pertenecientes a la Facultad de Ingeniería. Somos una empresa encargada desarrollar dispositivos innovadores tecnológicos para ayudar a aquellos ciudadanos peruanos que presenten dificultades al momento de comunicarse y tener una vida social estable a causa de problemas como las discapacidades auditivas, por ello presentamos a nuestro Subtilens
+    </p>
+    <h1 class = "mision">Mision</h1>
+    <p class = "misiontext">
+        Mejorar la comunicación y la inclusión social de las personas con discapacidad auditiva, desarrollamos soluciones innovadoras basadas en realidad aumentada. Nuestro compromiso es utilizar la tecnología como puente para eliminar barreras comunicativas y fomentar una sociedad más equitativa.
+    </p>
+    <h1 class = "vision">Visión</h1>
+    <p class = "visiontext">
+        Consolidarnos como una empresa líder en el desarrollo de tecnologías inclusivas a nivel global, ofreciendo productos confiables y adaptados a las necesidades de personas con discapacidad auditiva. Buscamos ser reconocidos por nuestra capacidad de innovación y nuestra calidad tecnológica.
+    </p>
+    
+</body>
+<script>
+fetch('/api/usuario')
+  .then(res => res.json())
+  .then(data => {
+    if (data.usuario) {
+      const userItem = document.getElementById('user-item');
+      userItem.innerHTML = `<span>👤 ${data.usuario}</span> <a href="/logout" style="margin-left:10px;color:red;">Salir</a>`;
+    }
+  });
+</script>
+
+</html>
